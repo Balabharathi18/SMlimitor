@@ -21,4 +21,20 @@ Ensure that Python 3.x is installed on your system. If not, install it from [pyt
 ### 2. Install Required Libraries
 
 Run the following command to install the required libraries:
+pip install -r requirements.txt
+python main.py
 
+
+## Packaging for Android:
+pip install buildozer
+buildozer init
+
+## Build the APK
+buildozer -v android debug
+buildozer android deploy run
+
+
+### Notes on Locking Social Media Apps:
+As mentioned earlier, locking apps directly on Android requires more in-depth native Android programming, which goes beyond Kivy's cross-platform capabilities. However, you can monitor app usage with Android's UsageStatsManager and show notifications or warnings. For actual locking, you would need to implement more advanced Android features, such as Device Admin APIs or Accessibility Services.
+
+Let me know if you need further clarification or more detailed instructions for any part of the project!
